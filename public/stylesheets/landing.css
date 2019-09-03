@@ -1,0 +1,249 @@
+body {
+	background-color: #000;
+	font-family: 'Quicksand', sans-serif;
+}
+
+p {
+	font-size: 1.5em;
+}
+
+h1 span {
+	font-family: 'La Belle Aurore', sans-serif;
+	font-size: 2.5em;
+}
+
+#landing-header {
+	color: #fff;
+	z-index: 1;
+	position: relative;
+	text-align: center;
+	padding-top: 30vh;
+	text-shadow: 0px 6px 5px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+#landing-header .btn-lg {
+	font-size: 2em;
+	color: #fff;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+#landing-header p {
+	margin-left: 30px;
+}
+
+/* ================ */
+/* NAVBAR CONFIG */
+/* ================ */
+#mainNavbar {
+	z-index: 1;
+	font-size: 1.5em;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+	color: #fff;
+}
+
+.nav-link i {
+	font-size: 1rem;
+}
+
+.nav-link .fa-sign-in-alt {
+	font-size: 1.2rem;
+}
+
+.navbar {
+	min-height: 90px;
+}
+
+.navbar-toggle {
+	/* (80px - button height 34px) / 2 = 23px */
+	margin-top: 23px;
+	padding: 9px 10px !important;
+}
+
+.navbar-toggler-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.navbar-text {
+	font-size: 1.2rem;
+}
+
+/* ================ */
+/* SLIDESHOW CONFIG */
+/* ================ */
+.slideshow {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.slideshow li {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	opacity: 0;
+	z-index: 0;
+	animation: imageAnimation 50s linear infinite;
+}
+
+.slideshow li:nth-child(1) {
+	background-image: url(http://i.imgur.com/K3mPv14.jpg);
+}
+.slideshow li:nth-child(2) {
+	background-image: url(http://i.imgur.com/SBEmFpv.jpg);
+	animation-delay: 10s;
+}
+.slideshow li:nth-child(3) {
+	background-image: url(http://i.imgur.com/emvhOnb.jpg);
+	animation-delay: 20s;
+}
+.slideshow li:nth-child(4) {
+	background-image: url(http://i.imgur.com/2LSMCmJ.jpg);
+	animation-delay: 30s;
+}
+.slideshow li:nth-child(5) {
+	background-image: url(http://i.imgur.com/TVGe0Ef.jpg);
+	animation-delay: 40s;
+}
+
+@keyframes imageAnimation {
+	0% {
+		opacity: 0;
+		animation-timing-function: ease-in;
+	}
+	10% {
+		opacity: 1;
+		animation-timing-function: ease-out;
+	}
+	20% {
+		opacity: 1;
+	}
+	30% {
+		opacity: 0;
+	}
+}
+
+/* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}
+
+/* ====================== */
+/* Responsive Breakpoints */
+/* ====================== */
+
+@media (min-width: 0px) and (max-width: 576px) {
+	#landing-header {
+		padding-top: 20vh;
+	}
+	#landing-header h1 {
+		font-size: 2em;
+	}
+	#landing-header span {
+		font-size: 1.8em;
+	}
+	#landing-header p {
+		font-size: 1.2em;
+		margin: 2rem auto;
+	}
+	#landing-header .btn-lg {
+		font-size: 1em;
+		font-style: bold;
+	}
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+	#landing-header {
+		padding-top: 20vh;
+	}
+	#landing-header h1 {
+		font-size: 2.5em;
+	}
+	#landing-header span {
+		font-size: 4em;
+	}
+	#landing-header p {
+		font-size: 1.5em;
+		margin: 0 0 2rem 2rem;
+	}
+	#landing-header .btn-lg {
+		font-size: 1.5em;
+		font-style: bold;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+	#landing-header {
+		padding-top: 20vh;
+	}
+	#landing-header span {
+		font-size: 2.5em;
+	}
+	#landing-header p {
+		font-size: 1.5em;
+		margin: 0 3rem 3rem 3rem;
+		padding: auto 4rem;
+	}
+	#landing-header .btn-lg {
+		font-size: 1.7em;
+		font-style: bold;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+	#landing-header p {
+		font-size: 1.2em;
+		margin: 0 3rem 3rem 3rem;
+		padding: auto 4rem;
+	}
+	#landing-header .btn-lg {
+		font-size: 1em;
+		font-style: bold;
+	}
+}
+
+@media (min-width: 768px) {
+	.navbar-nav > li > a {
+		/* (80px - line-height of 27px) / 2 = 26.5px */
+		padding-top: 26.5px;
+		padding-bottom: 26.5px;
+		line-height: 27px;
+	}
+}
+
+/* ToggleNavbar Config */
+@media (max-width: 768px) {
+	#mainNavbar {
+		font-size: 1.2em;
+	}
+	.navbar-toggler {
+		background-color: rgba(255, 255, 255, 0.2);
+	}
+	.navbar-toggler-icon {
+		width: 0.6em;
+		height: 0.6em;
+		color: #fff;
+	}
+	.nav-link {
+		margin-top: 1rem;
+	}
+	.nav-link i {
+		margin-right: 0.5rem;
+	}
+	.fas {
+		width: 24px;
+	}
+}

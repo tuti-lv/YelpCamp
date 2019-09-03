@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Quicksand:500&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=La+Belle+Aurore&display=swap" rel="stylesheet">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<!-- FontAwesome -->
+		<script src="https://kit.fontawesome.com/46c14ad7f1.js"></script>
+		<!-- Custom CSS -->
+		<link rel="stylesheet" type="text/css" href="/stylesheets/landing.css">
+		<!-- Modernizr-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+
+		<title>YelpCamp</title>
+    </head>
+    <body>
+	<nav id="mainNavbar" class="navbar navbar-dark navbar-expand-md">
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse flex-row-reverse" id="navLinks">
+            <ul class="navbar-nav">
+				<% if (!currentUser) { %>
+                <li class="nav-item mr-3">
+                  <a class="nav-link d-flex align-items-center" href="/login"><i class="fas fa-sign-in-alt mr-2"></i>Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex align-items-center" href="/register"><i class="fas fa-user-plus mr-2"></i>Sign Up</a>
+				</li>
+				<% } else { %>
+				<li class="nav-item">
+					<a class="navbar-text pr-3 d-flex align-items-center" href="#">Hi there, <%= currentUser.displayName %> </a>
+				</li>
+				<li class="nav-item font-weight-bold">
+					<a class="nav-link d-flex align-items-center" href="/logout"><i class="fas fa-sign-out-alt mr-2"></i>Logout</a>
+				</li>
+				<% } %> 
+            </ul>
+        </div>  
+    </nav>
+
+	<div class="container" id="landing-header">
+		<div class="row">
+			<div class="col">
+				<h1 class="display-3 m-0" >Welcome to <span>YelpCamp</span></h1>
+				<p>The only place you'll need, to plan your perfect nature getaway...</p>
+			</div>
+			<div class="col align-self-center">
+				<a href="/campgrounds" class="btn btn-default btn-lg shadow rounded ">
+				<i class="fas fa-campground"></i>
+				Our Campgrounds
+				</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-6">
+			</div>
+		</div>
+	</div>
+
+	<ul class="slideshow">
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	</ul>
+	
+	<!-- jQuery CDN -->
+	<script
+	src="https://code.jquery.com/jquery-3.1.1.min.js"
+	integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	crossorigin="anonymous"></script>
+	<!--Popper CDN-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
+	integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" 
+	crossorigin="anonymous"></script>
+	<!-- Bootstrap JS CDN -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
+	crossorigin="anonymous"></script>
+  </body>
+</html>

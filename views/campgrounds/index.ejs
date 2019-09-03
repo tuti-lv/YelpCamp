@@ -1,0 +1,34 @@
+<% include ../partials/header %>
+
+
+<div id="index-container" class="container-fluid row justify-content-around mb-5">
+    <div id="index-header" class="text-center col-xl-4 mb-5">
+        <div id="index-header-content" class="container-fluid">
+            <h1 class="display-1">Our Campgrounds</h1>
+            <p class="lead">We've compiled some of the best campgrounds from all across the USA - 
+                so you can enjoy the best of the outdoors 
+                <p class="text-muted">
+                    add your favorite campgrounds and share them with our community
+                </p>
+            </p>
+            <a class="btn btn-default shadow rounded" href="/campgrounds/new">
+                <i class="fas fa-map-pin"></i>
+                Add New Campground
+            </a>
+        </div>
+    </div>
+    <section id="gallery" class="col-xl-7">
+        <div class="card-columns text-center">
+        <% campgrounds.forEach(camp => { %>
+                <a class="shadow card" href="/campgrounds/<%= camp._id %>">
+                        <img class="card-img-top campImages" src="<%= camp.image %>" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= camp.name %></h5>
+                        </div>
+                </a>
+        <% }); %>
+        </div>
+    </section> 
+
+</div>
+<% include ../partials/footer %>

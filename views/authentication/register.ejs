@@ -1,0 +1,39 @@
+<% include ../partials/header %>
+
+<div class="container mb-5">
+    <div class="container text-center my-5">
+        <h2 class="header-logo">YelpCamp</h2>
+    </div>
+    <div class="container text-center">
+        <h1>Sign up</h1>
+        <p>A new adventure lies ahead</p>
+    </div>
+    <div class="row justify-content-center mt-5">
+        <form class="col-10 col-md-4" action="/register" method="POST">
+            <div class="form-group">
+                <label for="inputdisplayName">Full Name</label>
+                <input type="text" class="form-control" id="inputdisplayName" placeholder="e.g Princess Consuela Banana Hammock" name="displayName" required>
+            </div>    
+            <div class="form-group">
+                <label for="inputUsername">Username - Email address</label>
+                <input type="email" class="form-control" id="inputUsername" placeholder="e.g user@gmail.com" name="username" required>
+            </div>    
+            <div class="form-group">
+                <label for="inputImage">Password</label>
+                <input type="password" class="form-control" id="inputPassword" placeholder="" name="password" required>
+            </div> 
+            <br>
+            <div class="form-group">
+                <label for="inputAdminCode">*if you are an admin please enter your code*</label>
+                <input class="form-control" type="text" id="inputAdminCode" name="adminCode" placeholder="Admin code">
+            </div>   
+            <div class="form-group d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </div>    
+            <a href="/">Go Back</a>
+        </form>
+    </div>
+</div>
+        
+
+<% include ../partials/footer %>

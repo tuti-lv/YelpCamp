@@ -1,0 +1,25 @@
+<% include ../partials/header %>
+
+<div class="container mb-5">
+    <div class="row justify-content-center mt-5">
+        <h1 class="display-5 text-center">
+        Add a new review for 
+        "<%= campground.name%>"
+         Campground
+        </h1>
+    </div>
+    <div class="row justify-content-center mt-5">
+        <form class="col-4" action="/campgrounds/<%= campground._id%>/reviews" method="POST">
+            <div class="form-group">
+                <label for="inputText">Review</label>
+                <textarea class="form-control" id="inputText" rows="4" name="review[text]"></textarea>
+            </div>    
+            <div class="form-group d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </div>    
+            <a href="/campgrounds/<%= campground._id%>">Go Back</a>
+        </form>
+    </div>
+</div>
+
+<% include ../partials/footer %>

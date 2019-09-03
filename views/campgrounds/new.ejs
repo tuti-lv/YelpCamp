@@ -1,0 +1,42 @@
+<% include ../partials/header %>
+
+
+<div class="container mb-5">
+    <div class="container text-center my-5">
+        <h2 class="header-logo">YelpCamp</h2>
+    </div>
+    <div class="container text-center ">
+        <h1>Add a new campground</h1>
+    </div>
+    <div class="row justify-content-center mt-5">
+        <form class="col-10 col-md-4" action="/campgrounds" method="POST">
+            <div class="form-group">
+                <label for="inputCamp">Campground Name</label>
+                <input type="text" class="form-control" id="inputCamp" placeholder="e.g Whitefish Campground" name="name">
+            </div> 
+            <div class="form-group">
+                <label for="inputLocation">Location</label>
+                <input class="form-control" type="text" id="inputLocation" placeholder="Yosemite National Park, CA" name="location">
+            </div>   
+            <div class="form-group">
+                <label for="inputPrice">Price per Night</label>
+                <input type="number" class="form-control" id="inputPrice" placeholder="e.g $19.00" name="price" min="0.01" step="0.01">
+            </div>    
+            <div class="form-group">
+                <label for="inputImage">Campground Image</label>
+                <input type="text" class="form-control" id="inputImage" placeholder="Image URL goes here" name="image">
+            </div>    
+            <div class="form-group">
+                <label for="inputDesc">Campground Description</label>
+                <textarea class="form-control" id="inputDesc" rows="4" name="description"></textarea>
+            </div>    
+            <div class="form-group d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </div>    
+            <a href="/campgrounds">Go Back</a>
+        </form>
+    </div>
+</div>
+
+
+<% include ../partials/footer %>

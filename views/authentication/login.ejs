@@ -1,0 +1,32 @@
+<% include ../partials/header %>
+
+<div class="container mb-5">
+    <div class="container text-center my-5">
+        <h2 class="header-logo">YelpCamp</h2>
+    </div>
+    <div class="container text-center ">
+        <h1>Welcome Back</h1>
+        <p>Your next camping trip starts here. Sign in to connect with nature.
+    </div>
+    <div class="row justify-content-center mt-5">
+        <form class="col-10 col-md-4" action="/login" method="POST">
+            <div class="form-group">
+                <label for="inputEmail">Email address</label>
+                <input type="email" class="form-control" id="inputEmail" placeholder="e.g user@gmail.com" name="username" required>
+            </div>    
+            <div class="form-group">
+                <label for="inputPassword">Password</label>
+                <input type="password" class="form-control" id="inputPassword" placeholder="" name="password" required>
+            </div>    
+            <div class="form-group d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
+            </div>    
+            <p class="">New to YelpCamp? 
+                <a href="/register">Join now</a>
+            </p>
+        </form>
+    </div>
+</div>
+        
+
+<% include ../partials/footer %>
